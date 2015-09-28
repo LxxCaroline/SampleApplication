@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView android:id="@+id/tv_clipboard" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="20dp"
+              android:text="@string/hello_world"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" android:onClick="clipBoard"
+            android:text="点击按钮复制文本框中的内容"/>
+
+    <EditText android:layout_width="300dp" android:layout_height="wrap_content"
+              android:hint="复制剪贴板内容到这里"/>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="走马灯效果的文本"/>
+
+        <!-- 如果textview没有获取到焦点的话，是不会有走马灯的效果的-->
+        <TextView
+            android:layout_width="160dp" android:layout_height="wrap_content"
+            android:singleLine="true" android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:layout_marginBottom="10dp" android:text="123456789abcdefghijklmnopqrstuvwxyz"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="显示不同颜色字体大小的文字"/>
+
+        <TextView
+            android:id="@+id/tv_common"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#aabbcc"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="显示带URL地址、电话号等的文本"/>
+
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autoLink="all"
+            android:background="#aabbcc"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="使用imageGetter来显示图片的文本"/>
+
+        <TextView
+            android:id="@+id/tv_img"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#aabbcc"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="android:drawableXX来显示图片的文本"/>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#aabbcc"
+            android:drawableBottom="@mipmap/ic_launcher"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawableRight="@mipmap/ic_launcher"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="@string/hello_world"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="使用spannableString设置部分文本点击事件"/>
+
+        <TextView
+            android:id="@+id/tv_spannable"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#aabbcc"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="带有边框的文本"/>
+
+        <com.think.linxuanxuan.sampleapplication.other.BorderTextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:text="带有边框的TextView"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" android:layout_marginTop="5dp"
+            android:text="垂直滚动的文本"/>
+
+        <TextView
+            android:layout_width="150dp" android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarFadeDuration="2000"
+            android:layout_marginBottom="10dp" android:text="123456789abcdefdhakjdjkacaneuncaluecnauencauleiacnauieaudnaucne;uicanueian;eghijklmnopqrstuvwxyz"/>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#aabbcc"/>
+
+    </LinearLayout>
+</ScrollView>

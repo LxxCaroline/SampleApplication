@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   
+AppWidgetProvderInfo: 描述AppWidget的大小、更新频率和初始界面等信息，以XML文件形式存在于应用的res/xml/目录下。  
+注意：SDK1.5之后此android:updatePeriodMillis就失效了，要自己创建service更新  
+ -->
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:configure="com.think.linxuanxuan.sampleapplication.other.MyAppWidgetConfigure"
+    android:initialLayout="@layout/view_appwidget"
+    android:minHeight="200dp"
+    android:widgetCategory="home_screen|keyguard"
+    android:minWidth="150dp" />
+<!--
+android:configure:对AppWidget的配置activity如果启动AppWidget前需要对AppWidget有什么需要设置的，可以使用该属性
+android:initialLayout：AppWidget初始化的布局界面
+-->

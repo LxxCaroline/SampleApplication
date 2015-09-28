@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button android:id="@+id/btn_autocall" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="直接拨打电话12345678911"/>
+
+    <Button android:id="@+id/btn_autodial" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="将电话传入拨号界面，但不拨号"/>
+    <Button android:id="@+id/btn_dial" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="进入拨号界面"/>
+    <Button android:id="@+id/btn_web" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="浏览网页"/>
+    <Button android:id="@+id/btn_email" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="发送邮件"/>
+    <Button android:id="@+id/btn_contacts" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="查看手机联系人"/>
+    <Button android:id="@+id/btn_setting" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="进入系统设置页面"/>
+    <Button android:id="@+id/btn_audio" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="启动处理音频的程序"/>
+    <Button android:id="@+id/btn_animstart" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="动画进入其他activity"/>
+    <Button android:id="@+id/btn_animfinish" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickActivity"
+            android:text="动画退出该activity"/>
+
+</LinearLayout>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.think.linxuanxuan.sampleapplication"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".mainActivity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.GetItemViewTypeActivity"
+            android:label="@string/GetItemViewTypeSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ClearTopActivity"
+            android:label="@string/ClearTopSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".other.ClearTopActivity2"
+            android:label="@string/ClearTopSample"></activity>
+        <activity
+            android:name=".other.ClearTopActivity3"
+            android:label="@string/ClearTopSample"></activity>
+        <activity
+            android:name=".mainActivity.StartIntentActionActivity"
+            android:label="@string/StartIntentActionSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".other.MyActionActivity">
+            <intent-filter>
+                <action android:name="myaction"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".other.MyActionActivity2">
+            <intent-filter>
+                <action android:name="myaction"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ClipBoardActivity"
+            android:label="@string/ClipBoardSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.InflateViewGroupActivity"
+            android:label="@string/InflateViewGroupSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ViewStubActivity"
+            android:label="@string/ViewStubSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.WebViewActivity"
+            android:label="@string/WebView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.SecurityCodeActivity"
+            android:label="@string/SecurityCode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.DispatchTouchEventActivity"
+            android:label="@string/DispatchTouchEvent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.InjectViewActivitiy"
+            android:label="@string/InjectView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.GestureSampleActivity"
+            android:label="@string/GestureSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.PasswordTransformationMethodActivity"
+            android:label="@string/PasswordTransformationSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.CustomPasswordGridViewActivity"
+            android:label="@string/CustomPasswordSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.TextViewActivity"
+            android:label="@string/TextViewSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.EditTextActivity"
+            android:label="@string/EditTextSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ImageViewActivity"
+            android:label="@string/ImageViewSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ImageSwitcherActivity"
+            android:label="@string/ImageSwitcherSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.QuickContactBadgeActivity"
+            android:label="@string/QuickContactBadgeSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.AlertDialogActivity"
+            android:label="@string/AlertDialogSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ToastActivity"
+            android:label="@string/ToastSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.NotificationActivity"
+            android:label="@string/NotificationSample"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.SharedPreferenceActivity"
+            android:label="@string/SharedPreferenceSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.FileActivity"
+            android:label="@string/FileSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.StartActivityActivity"
+            android:label="@string/StartActivitySample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.BroadcastActivity"
+            android:label="@string/BroadcastSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ContentProviderActivity"
+            android:label="@string/ContentProviderSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ServiceActivity"
+            android:label="@string/ServiceSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.SocketActivity"
+            android:label="@string/SocketSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.MediaActivity"
+            android:label="@string/MediaSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.DrawActivity"
+            android:label="@string/DrawSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.SensorActivity"
+            android:label="@string/SensorSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.AppWidgetActivity"
+            android:label="@string/AppWidgetSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".other.MyAppWidgetConfigure">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+        <!--广播-->
+        <receiver
+            android:name=".other.PowerConnectionReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".other.MyCustomReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.think.linxuanxuan.MY_BROADCAST"/>
+                <category android:name="com.think.linxuanxuan.mycategory"/>
+            </intent-filter>
+        </receiver>
+        <!-- MyAppWidget类为一个广播接收器，因为MyAppWidget继承自AppWidgetProvider -->
+        <receiver
+            android:name="com.think.linxuanxuan.sampleapplication.other.MyAppWidgetProvider"
+            android:label="添加桌面控件">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_appwidget"/>
+        </receiver>
+
+        <!--service-->
+        <service
+            android:name=".other.NumCountService"
+            android:enabled="true"/>
+        <service
+            android:name=".other.CharCountService"
+            android:enabled="true"/>
+    </application>
+
+    <!--permission for webview sample-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- permission for security code sample-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+</manifest>

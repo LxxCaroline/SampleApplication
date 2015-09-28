@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用Intent来对AppWidget进行操作"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_pick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="appwidgetClick"
+        android:text="选择AppWidget" />
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="appwidgetClick"
+        android:text="绑定appWidget" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#abc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="向AppWidget发送消息通知更新"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="appwidgetClick"
+        android:text="通知被选中的appWidget去更新----onUpdate(默认更新刚刚选择的AppWidget)" />
+
+    <Button
+        android:id="@+id/btn_extra_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="appwidgetClick"
+        android:text="发送额外的信息来通知被选中的appWidget去更新---onAppWidgetOptionsChanged（界面上无任何变化，请看log）" />
+
+    <FrameLayout
+        android:id="@+id/appwidget_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--一个设置界面对应一个PreferenceScreen标签-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--PreferenceCategory标签表示一个设置分类，title属性表示分类名称，该名称会显示在设置界面上 -->
+    <!-- android:summary表示列表项的摘要，摘要用小字体显示-->
+    <!-- android:key该属性的值就是保存在xml文件中的key-value中的key-->
+    <PreferenceCategory android:title="我的位置源">
+        <CheckBoxPreference android:key="wireless_network"
+                            android:summary="使用无线网络查看应用程序中的位置"
+                            android:title="使用无线网络"/>
+        <CheckBoxPreference android:key="gps_satellite_setting"
+                            android:summary="启用GPS卫星设置"
+                            android:title="定位时，精确到接到级别（取消可解决电量）"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="个人信息设置">
+
+        <CheckBoxPreference android:key="yesno_save_individual_info"
+                            android:title="是否保存个人信息"/>
+        <EditTextPreference android:key="individual_name"
+                            android:summary="请输入真实姓名"
+                            android:title="姓名"/>
+        <!-- 有一个子设置项，单击该设置页就会进入这个子设置页-->
+        <PreferenceScreen android:key="other_individual_msg"
+                          android:summary="是否工作、手机"
+                          android:title="其他个人信息">
+            <CheckBoxPreference android:key="is_an_employee"
+                                android:title="是否工作"/>
+            <EditTextPreference android:key="mobile"
+                                android:summary="请输入真实手机号"
+                                android:title="手机"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

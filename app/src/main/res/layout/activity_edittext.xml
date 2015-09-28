@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp" android:layout_marginTop="30dp"
+        android:text="自动完成匹配的AutoCompleteTextView"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/et_autocomplete"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="输入1会出现匹配的"
+        android:textSize="15dp"/>
+
+    <View
+        android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aabbcc"/>
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp" android:layout_marginTop="30dp"
+        android:text="自动完成匹配的MultiAutoCompleteTextView"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/et_multiComplete"
+        android:layout_width="160dp" android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aabbcc"/>
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp" android:layout_marginTop="30dp"
+        android:text="不因为输入法上移的EditText"/>
+
+    <EditText
+        android:layout_width="160dp" android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aabbcc"/>
+
+</LinearLayout>

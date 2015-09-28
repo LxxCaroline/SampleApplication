@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:onClick="viewStubClick"
+            android:text="show stub"/>
+
+    <!-- 其中inflatedId就是新加载进来的view的id,如果需要获取这个view,就要用这个inflatedId,原来的id已经被取代了-->
+    <ViewStub android:id="@+id/viewstub" android:layout_width="300dp"
+              android:layout_height="300dp"
+              android:inflatedId="@+id/vs_mylayout"
+              android:layout="@layout/view_test2"/>
+
+</LinearLayout>

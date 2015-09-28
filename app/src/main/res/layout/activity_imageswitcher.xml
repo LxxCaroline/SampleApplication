@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button android:id="@+id/btn_image1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示第一张图片"
+            android:onClick="changeImage"/>
+
+    <Button android:id="@+id/btn_image2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示第儿张图片"
+            android:onClick="changeImage"/>
+
+    <ImageSwitcher android:id="@+id/imageswithcer" android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <Button android:id="@+id/btn_common" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="普通警告框"/>
+    <Button android:id="@+id/btn_list" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="显示list的警告框"/>
+
+    <Button android:id="@+id/btn_singlelist" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="单选list的警告框"/>
+
+    <Button android:id="@+id/btn_multilist" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="复选list的警告框"/>
+
+    <Button android:id="@+id/btn_progressdialog" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="显示进度的警告框"/>
+
+    <Button android:id="@+id/btn_custom" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="登录警告框"/>
+
+    <Button android:id="@+id/btn_custom2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="修改AlertDialog内部handler使点击按钮不关闭框"/>
+
+    <Button android:id="@+id/btn_location" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDialog"
+            android:text="修改警告框显示位置并修改透明度"/>
+
+</LinearLayout>

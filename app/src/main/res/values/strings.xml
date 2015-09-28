@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">SampleApplication</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="GetItemViewTypeSample">在list中使用GetItemViewType</string>
+    <string name="ClearTopSample">ClearTop清空当前页面之前有关的页面</string>
+    <string name="StartIntentActionSample">用action来启动activity</string>
+    <string name="ClipBoardSample">剪贴板</string>
+    <string name="InflateViewGroupSample">Inflate函数ViewGroup参数</string>
+    <string name="ViewStubSample">ViewStub例子</string>
+    <string name="WebView">WebView例子</string>
+    <string name="SecurityCode">发送验证码和读取验证码</string>
+    <string name="SendMessage">发送验证码</string>
+    <string name="Message">验证码</string>
+    <string name="ClickMe">请点击按钮</string>
+    <string name="DispatchTouchEvent">理解DispatchTouchEvent的例子</string>
+    <string name="InjectView">使用第三方InjectView</string>
+    <string name="GestureSample">手势例子</string>
+    <string name="PasswordTransformationSample">点击显示密码</string>
+    <string name="CustomPasswordSample">自定义支付输入密码框</string>
+    <string name="TextViewSample">关于TextView的例子</string>
+    <string name="EditTextSample">关于EditText的例子</string>
+    <string name="ImageViewSample">关于ImageView的例子</string>
+    <string name="ImageSwitcherSample">使用ImageSwitcher实现图片淡入淡出的效果</string>
+    <string name="QuickContactBadgeSample">查看手机联系人的例子</string>
+    <string name="AlertDialogSample">多种多样的AlertDialog</string>
+    <string name="ToastSample">多种多样的Toast</string>
+    <string name="NotificationSample">多种多样的Notification</string>
+    <string name="SharedPreferenceSample">SharedPreference设置页面</string>
+    <string name="FileSample">在不同卡上读写文件</string>
+    <string name="StartActivitySample">多种多样的activity</string>
+    <string name="BroadcastSample">广播的例子</string>
+    <string name="ContentProviderSample">使用ContentProvider读取联系人列表</string>
+    <string name="ServiceSample">Service的例子</string>
+    <string name="SocketSample">Socket的例子</string>
+    <string name="MediaSample">Media的例子</string>
+    <string name="DrawSample">自定义View的例子</string>
+    <string name="SensorSample">传感器的例子</string>
+    <string name="AppWidgetSample">桌面控件的例子</string>
+
+    <string name="instruction">一个聊天的例子，使用socket，因为聊天需要长连接，但是感觉很耗资源，
+        网上说采用长轮询，现在先写一个利用socket进行长连接的例子吧.使用该例子的时候，需要启动本地服务器，
+        即在工程目录下的server.js，使用nodejs来启动
+    </string>
+    <string name="instruction2">将本部手机作为server的例子：作为server需要有ip地址，但是当手机用数据连接时，
+        是没有ip的，是通过周围的基站来收发数据的，所以需要将手机连接至wifi下,然后查看手机的ip地址，
+        现在测试手机的ip地址为192.168.31.197，设定的端口为1234，当服务器启动后，
+        在浏览器中输入http://192.168.31.197:1234会输出该手机的设备号的hashcode，默认接受三个请求后，server自动关闭
+    </string>
+</resources>

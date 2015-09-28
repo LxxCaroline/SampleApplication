@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:minHeight="65dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_paymentitem_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/tv_paymentitem_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/iv_paymentitem_checked"
+        android:ellipsize="middle"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="**银行储蓄卡(尾号****)"
+        android:textColor="#ff9090"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_payment_item_desp"
+        style="@style/item_pay_channel_desc_tv"
+        android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_paymentitem_card"
+        android:text="不足支付"
+        />
+
+</RelativeLayout>
