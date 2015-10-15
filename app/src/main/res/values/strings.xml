@@ -30,6 +30,7 @@
     <string name="SharedPreferenceSample">SharedPreference设置页面</string>
     <string name="FileSample">在不同卡上读写文件</string>
     <string name="StartActivitySample">多种多样的activity</string>
+    <string name="ActivityAnimationSample">activity动画的例子</string>
     <string name="BroadcastSample">广播的例子</string>
     <string name="ContentProviderSample">使用ContentProvider读取联系人列表</string>
     <string name="ServiceSample">Service的例子</string>
@@ -48,4 +49,5 @@
         现在测试手机的ip地址为192.168.31.197，设定的端口为1234，当服务器启动后，
         在浏览器中输入http://192.168.31.197:1234会输出该手机的设备号的hashcode，默认接受三个请求后，server自动关闭
     </string>
+    <string name="FragmentCommunicationSample">fragment通讯例子</string>
 </resources>

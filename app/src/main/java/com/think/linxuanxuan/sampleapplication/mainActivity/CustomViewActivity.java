@@ -6,11 +6,12 @@ import android.os.Bundle;
 import com.think.linxuanxuan.sampleapplication.R;
 
 
-public class DrawActivity extends Activity {
+public class CustomViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_draw);
+        setContentView(R.layout.activity_custom_view);
+
     }
 }

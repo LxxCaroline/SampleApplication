@@ -37,13 +37,6 @@
             android:layout_height="wrap_content"
             android:onClick="onClickActivity"
             android:text="启动处理音频的程序"/>
-    <Button android:id="@+id/btn_animstart" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickActivity"
-            android:text="动画进入其他activity"/>
-    <Button android:id="@+id/btn_animfinish" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickActivity"
-            android:text="动画退出该activity"/>
+
 
 </LinearLayout>

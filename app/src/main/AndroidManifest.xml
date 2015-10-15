@@ -232,6 +232,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".mainActivity.ActivityAnimationActivity"
+            android:label="@string/ActivityAnimationSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".mainActivity.BroadcastActivity"
             android:label="@string/BroadcastSample">
             <intent-filter>
@@ -272,7 +280,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".mainActivity.DrawActivity"
+            android:name=".mainActivity.CustomViewActivity"
             android:label="@string/DrawSample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>

@@ -53,15 +53,7 @@ public class StartActivityActivity extends Activity {
                 audioIntent.setType("audio/*");
                 startActivity(Intent.createChooser(audioIntent, "选择音频程序"));
                 break;
-            case R.id.btn_animstart:
-                Intent anotherIntent = new Intent(this, ClearTopActivity.class);
-                startActivity(anotherIntent);
-                overridePendingTransition(android.R.anim.slide_in_left,R.anim.abc_slide_in_top);
-                break;
-            case R.id.btn_animfinish:
-                finish();
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                break;
+
         }
 
     }

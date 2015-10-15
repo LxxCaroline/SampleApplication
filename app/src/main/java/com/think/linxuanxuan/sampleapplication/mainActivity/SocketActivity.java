@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.think.linxuanxuan.sampleapplication.R;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -226,7 +229,18 @@ public class SocketActivity extends Activity {
                         OutputStream os = s.getOutputStream();
                         OutputStreamWriter osw = new OutputStreamWriter(os);
                         BufferedWriter bw = new BufferedWriter(osw);
-                        bw.write("大家好");
+                        JSONArray array = new JSONArray();
+                        array.put("1");
+                        array.put("2");
+                        array.put("3");
+                        array.put("4");
+                        JSONObject object = new JSONObject();
+                        try {
+                            object.put("obj", array);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        bw.write(object.toString());
                         bw.flush();
                     } else {
                         Toast.makeText(SocketActivity.this, "你还未进入该房间", Toast.LENGTH_SHORT).show();

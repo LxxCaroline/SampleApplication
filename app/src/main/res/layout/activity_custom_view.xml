@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:ecos="http://schemas.android.com/tools"
-            xmlns:round="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:round="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,24 +14,24 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:text="使用自定义view使图片像画卷一样打开"/>
+            android:text="使用自定义view使图片像画卷一样打开" />
 
         <com.think.linxuanxuan.sampleapplication.other.DrawBitmapView
             android:layout_width="match_parent"
-            android:layout_height="220dp"/>
+            android:layout_height="220dp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:background="#aabbcc"/>
+            android:background="#aabbcc" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="自定义view，绘制圆形图片"/>
+            android:text="自定义view，绘制圆形图片" />
 
         <com.think.linxuanxuan.sampleapplication.other.RoundImageView
             android:layout_width="wrap_content"
@@ -39,61 +39,76 @@
             android:src="@drawable/snail"
             round:borderColor="@android:color/darker_gray"
             round:borderWidth="10dp"
-            round:radius="100dp"
-            />
+            round:radius="100dp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:background="#aabbcc"/>
+            android:background="#aabbcc" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="自定义view，绘制各种各样的图形"/>
+            android:text="自定义view，绘制各种各样的图形" />
+
+        <include layout="@layout/view_set_round_progress" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#aabbcc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="自定义view，绘制各种各样的图形" />
 
         <com.think.linxuanxuan.sampleapplication.other.DrawShapeView
             android:layout_width="match_parent"
-            android:layout_height="220dp"/>
+            android:layout_height="220dp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:background="#aabbcc"/>
+            android:background="#aabbcc" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="自定义view，绘制小球，在灰色区域任意触摸，小球会移动到触摸点,该界面继承自View"/>
+            android:text="自定义view，绘制小球，在灰色区域任意触摸，小球会移动到触摸点,该界面继承自View" />
 
         <com.think.linxuanxuan.sampleapplication.other.DrawCircleView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#aabbcc"/>
+            android:background="#aabbcc" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:background="#aabbcc"/>
+            android:background="#aabbcc" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="自定义view，绘制小球，在灰色区域任意触摸，小球会移动到触摸点,该界面继承自SurfaceView。\n使用surfaceView开发时可以直接获得canvas对象，而不像view,必须要在onDraw方法中才可以获得\nsurfaceView支持双缓冲技术，绘制图形效率更高\nsurfaceView可以在非ui线程中直接绘制图形"/>
+            android:text="自定义view，绘制小球，在灰色区域任意触摸，小球会移动到触摸点,该界面继承自SurfaceView。\n使用surfaceView开发时可以直接获得canvas对象，而不像view,必须要在onDraw方法中才可以获得\nsurfaceView支持双缓冲技术，绘制图形效率更高\nsurfaceView可以在非ui线程中直接绘制图形" />
 
         <com.think.linxuanxuan.sampleapplication.other.DrawCircleSurfaceView
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp" />
+
 
     </LinearLayout>
 

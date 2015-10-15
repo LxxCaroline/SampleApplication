@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#abc"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_animstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="activityAnimationClick"
+            android:text="动画进入其他activity" />
+
+        <Button
+            android:id="@+id/btn_animfinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="activityAnimationClick"
+            android:text="动画退出该activity" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下面的例子使用ActivityCompat 来进行动画" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ab0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="makeCustomAnimation" />
+
+            <Button
+                android:id="@+id/btn_compat_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="activityAnimationClick"
+                android:text="动画进入其他activity" />
+
+            <Button
+                android:id="@+id/btn_compat_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_compat_start"
+                android:layout_below="@id/btn_compat_start"
+                android:onClick="activityAnimationClick"
+                android:text="动画退出该activity" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ab0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="makeScaleUpAnimation" />
+
+            <Button
+                android:id="@+id/btn_scale_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="activityAnimationClick"
+                android:text="动画进入其他activity" />
+
+            <ImageView
+                android:id="@+id/iv_scale"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/btn_scale_start"
+                android:src="@drawable/snail" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ab0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="makeScaleUpAnimation" />
+
+            <Button
+                android:id="@+id/btn_thumb_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="activityAnimationClick"
+                android:text="动画进入其他activity" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
