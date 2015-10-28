@@ -1,9 +1,15 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/material_blue_300</item>
+        <item name="colorPrimaryDark">@color/material_lime_100</item>
+        <item name="android:windowBackground">@color/material_red_100</item>
+        <item name="android:textColorPrimary">@color/material_green_100</item>
+        <item name="colorAccent">@color/material_orange_A400</item>
     </style>
+
     <style name="item_pay_channel_desc_tv">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
