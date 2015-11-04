@@ -38,5 +38,4 @@
             android:onClick="onClickActivity"
             android:text="启动处理音频的程序"/>
 
-
 </LinearLayout>

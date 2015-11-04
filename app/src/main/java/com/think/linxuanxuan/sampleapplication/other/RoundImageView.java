@@ -88,7 +88,7 @@ public class RoundImageView  extends ImageView {
         circleRadius = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, circleRadius, metrics);
 
         circleRadius = (int) a.getDimension(R.styleable.RoundBitmapView_radius, circleRadius);
-        borderWidth = (int) a.getDimension(R.styleable.RoundBitmapView_borderWidth, borderWidth);
+        borderWidth = (int) a.getDimension(R.styleable.RoundBitmapView_rborderWidth, borderWidth);
         borderColor = a.getColor(R.styleable.RoundBitmapView_borderColor, borderColor);
         // Recycle
         a.recycle();

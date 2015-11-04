@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:checked="true"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Home"/>
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Message">
+
+            <menu>
+                <item
+                    android:id="@+id/navigation_sub_item_1"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="From Friends"/>
+                <item
+                    android:id="@+id/navigation_sub_item_2"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="From Relatives"/>
+            </menu>
+
+        </item>
+    </group>
+
+</menu>

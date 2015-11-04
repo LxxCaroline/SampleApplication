@@ -24,7 +24,7 @@
 
     <declare-styleable name="RoundBitmapView">
         <attr name="borderColor" format="color" />
-        <attr name="borderWidth" format="dimension" />
+        <attr name="rborderWidth" format="dimension" />
         <attr name="radius" format="dimension" />
     </declare-styleable>
 

@@ -34,14 +34,14 @@ public class EditTextActivity extends Activity {
     }
 
     void setAutoCompleteEditText() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_simple_dropdown_hint, autoString);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, autoString);
         //因为AutoCompleteTextView默认输入两个字符才开始匹配，这里可以设置输入一个字符就开始匹配
         etAutoComplete.setThreshold(1);
         etAutoComplete.setAdapter(adapter);
     }
 
     void setMultiAutoCompleteEditText() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_simple_dropdown_hint, autoString);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, autoString);
         etMultiComplete.setAdapter(adapter);
         etMultiComplete.setThreshold(1);
         //输入逗号会重新匹配逗号后面的字符。
