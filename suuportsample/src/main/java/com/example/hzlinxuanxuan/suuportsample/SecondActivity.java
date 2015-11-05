@@ -48,12 +48,6 @@ public class SecondActivity extends AppCompatActivity {
                 Button btn = new Button(SecondActivity.this);
                 btn.setText("tv" + position);
                 btn.setTextSize(30.f);
-                btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(SecondActivity.this,ThirdActivity.class));
-                    }
-                });
                 container.addView(btn);
                 return btn;
             }

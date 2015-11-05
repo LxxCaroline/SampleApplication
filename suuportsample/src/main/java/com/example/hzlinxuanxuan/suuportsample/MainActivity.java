@@ -11,25 +11,24 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    CollapsingToolbarLayout collapsingToolbarLayout;
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
 
-    DrawerLayout drawerLayout;
-    ActionBarDrawerToggle drawerToggle;
-
-    CoordinatorLayout rootLayout;
-    FloatingActionButton fabBtn;
-    private Button btnNext;
+    private CoordinatorLayout rootLayout;
+    private FloatingActionButton fabBtn;
+    private RecyclerView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,36 +47,44 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
         drawerLayout.setDrawerListener(drawerToggle);
-
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        rootLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
-
-        fabBtn = (FloatingActionButton) findViewById(R.id.fabBtn);
-        fabBtn.setOnClickListener(new View.OnClickListener() {
+        lv = (RecyclerView) findViewById(R.id.lv);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        lv.setLayoutManager(layoutManager);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getData(), new RecyclerViewAdapter.MyOnClickListener() {
             @Override
-            public void onClick(View v) {
-                Snackbar.make(rootLayout, "Hello. I am Snackbar!", Snackbar.LENGTH_SHORT)
+            public void onClick(View view, int position) {
+                Snackbar.make(rootLayout, "u click item:"+position+"!", Snackbar.LENGTH_SHORT)
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                             }
-                        })
-                        .show();
+                        }).show();
             }
         });
+        lv.setAdapter(adapter);
 
-        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
-        collapsingToolbarLayout.setTitle("Design Library");
-
-        btnNext = (Button) findViewById(R.id.btn_next);
-        btnNext.setOnClickListener(new View.OnClickListener() {
+        rootLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
+        fabBtn = (FloatingActionButton) findViewById(R.id.fabBtn);
+        fabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SecondActivity.class));
             }
         });
+
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
+        collapsingToolbarLayout.setTitle("Design Library");
+    }
+
+    public static ArrayList<String> getData() {
+        ArrayList<String> data = new ArrayList<>(20);
+        for (int i = 0; i < 20; i++) {
+            data.add("data #" + i);
+        }
+        return data;
     }
 
     @Override
