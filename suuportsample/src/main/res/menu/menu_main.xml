@@ -3,27 +3,28 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_item_1"
-            android:checked="true"
+            android:id="@+id/menu_home"
+            android:checkable="true"
             android:icon="@mipmap/ic_launcher"
-            android:title="Home"/>
+            android:title="Home" />
         <item
-            android:id="@+id/navigation_item_2"
+            android:id="@+id/menu_contacts"
+            android:checkable="false"
             android:icon="@mipmap/ic_launcher"
-            android:title="Message">
-
+            android:title="Contacts">
             <menu>
                 <item
-                    android:id="@+id/navigation_sub_item_1"
-                    android:icon="@mipmap/ic_launcher"
-                    android:title="From Friends"/>
-                <item
-                    android:id="@+id/navigation_sub_item_2"
-                    android:icon="@mipmap/ic_launcher"
-                    android:title="From Relatives"/>
+                    android:id="@+id/menu_friends"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_action_person"
+                    android:title="Friends" />
             </menu>
-
         </item>
+        <item
+            android:id="@+id/menu_waterfall"
+            android:checkable="true"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Home" />
     </group>
 
 </menu>

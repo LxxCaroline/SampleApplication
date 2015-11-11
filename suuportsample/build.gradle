@@ -22,5 +22,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:design:22.2.1'
-    compile 'com.android.support:recyclerview-v7:23.1.0'
+//    23.1.0上有bug，当swipe删除时，会出现顶部的item未被绘制
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.android.support:cardview-v7:23.1.0'
 }
