@@ -39,6 +39,10 @@
     <string name="DrawSample">自定义View的例子</string>
     <string name="SensorSample">传感器的例子</string>
     <string name="AppWidgetSample">桌面控件的例子</string>
+    <string name="ViewSwitcherSample">ViewSwitcher的例子</string>
+    <string name="ViewFlipperSample">ViewFlipper幻灯片的例子</string>
+    <string name="TextImageSwitcherSample">TextImageSwitcher的例子</string>
+    <string name="ListPickerSample">列表选择器</string>
 
     <string name="instruction">一个聊天的例子，使用socket，因为聊天需要长连接，但是感觉很耗资源，
         网上说采用长轮询，现在先写一个利用socket进行长连接的例子吧.使用该例子的时候，需要启动本地服务器，
@@ -176,4 +180,8 @@
     <!--<color name="material_brown_300">#ffa1887f</color>-->
     <!--<color name="material_brown_500">#ff795548</color>-->
     <!--<color name="material_brown_700">#ff5d4037</color>-->
+    <string name="intro">This sample illustrates the use of a <b>TextSwitcher</b> to display text.
+\n\n<b>Click the button</b> below to set new text in the TextSwitcher and observe the in and out
+ fade animations.</string>
+    <string name="next">Next</string>
 </resources>

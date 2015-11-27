@@ -18,5 +18,5 @@
         android:layout_height="wrap_content"
         android:onClick="showToast"
         android:text="toast显示内容为自定义view" />
-
+    
 </LinearLayout>

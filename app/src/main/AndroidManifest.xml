@@ -18,6 +18,63 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".mainActivity.ListPickerActivity"
+            android:theme="@style/SampleTheme.Light"
+            android:label="@string/ListPickerSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.CustomViewActivity"
+            android:label="@string/DrawSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.SensorActivity"
+            android:label="@string/SensorSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.AppWidgetActivity"
+            android:label="@string/AppWidgetSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ViewSwitcherActivity"
+            android:label="@string/ViewSwitcherSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.ViewFlipperActivity"
+            android:label="@string/ViewFlipperSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainActivity.TextImageSwitcherActivity"
+            android:label="@string/TextImageSwitcherSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".mainActivity.GetItemViewTypeActivity"
             android:label="@string/GetItemViewTypeSample">
             <intent-filter>
@@ -279,30 +336,7 @@
                 <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mainActivity.CustomViewActivity"
-            android:label="@string/DrawSample">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".mainActivity.SensorActivity"
-            android:label="@string/SensorSample">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".mainActivity.AppWidgetActivity"
-            android:label="@string/AppWidgetSample">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
+
         <activity
             android:name=".other.MyAppWidgetConfigure">
             <intent-filter>

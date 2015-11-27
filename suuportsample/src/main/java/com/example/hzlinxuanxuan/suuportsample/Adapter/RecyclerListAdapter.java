@@ -22,6 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.hzlinxuanxuan.suuportsample.R;
@@ -39,35 +40,25 @@ import java.util.Collections;
 public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapter.ItemViewHolder>
         implements ItemTouchHelperAdapter {
 
-    private final OnStartDragListener mDragStartListener;
+    private View.OnClickListener btnListener, itemListener;
     private ArrayList<String> datas;
 
-    public RecyclerListAdapter(OnStartDragListener dragStartListener, ArrayList<String> data) {
-        this.mDragStartListener = dragStartListener;
+    public RecyclerListAdapter(View.OnClickListener btnListener, View.OnClickListener itemListener, ArrayList<String> data) {
+        this.btnListener = btnListener;
+        this.itemListener = itemListener;
         datas = data;
     }
 
     @Override
     public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_friend_item, parent, false);
-        ItemViewHolder itemViewHolder = new ItemViewHolder(view);
+        ItemViewHolder itemViewHolder = new ItemViewHolder(view, btnListener,itemListener);
         return itemViewHolder;
     }
 
     @Override
     public void onBindViewHolder(final ItemViewHolder holder, int position) {
         holder.tvName.setText(datas.get(position));
-
-        // Start a drag whenever the handle view it touched
-//        holder.handleView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
-//                    mDragStartListener.onStartDrag(holder);
-//                }
-//                return false;
-//            }
-//        });
     }
 
     @Override
@@ -96,11 +87,16 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
         public CardView mCardView;
         public TextView tvName;
+        public Button btn;
 
-        public ItemViewHolder(View itemView) {
+        public ItemViewHolder(View itemView, View.OnClickListener listener,View.OnClickListener itemListener) {
             super(itemView);
             mCardView = (CardView) itemView.findViewById(R.id.card_view);
             tvName = (TextView) itemView.findViewById(R.id.tv_name);
+            btn = (Button) itemView.findViewById(R.id.btn);
+            btn.setOnClickListener(listener);
+            btn.setFocusable(false);
+            this.itemView.setOnClickListener(itemListener);
         }
 
         @Override

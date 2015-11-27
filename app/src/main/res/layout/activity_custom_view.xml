@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/snail"
             round:borderColor="@android:color/darker_gray"
-            round:borderWidth="10dp"
-            round:radius="100dp" />
+            round:rborderWidth="5dp"
+            round:radius="50dp" />
 
         <View
             android:layout_width="match_parent"

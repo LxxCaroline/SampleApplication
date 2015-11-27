@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SampleTheme" parent="android:Theme">
+        <item name="listPickerStyle">@style/LPWidget.Holo.ListPicker</item>
+    </style>
+
+    <style name="SampleTheme.Light" parent="android:Theme.Light">
+        <item name="listPickerStyle">@style/LPWidget.Holo.Light.ListPicker</item>
+    </style>
+</resources>

@@ -112,7 +112,8 @@ public class RoundImageView  extends ImageView {
     }
 
     public Bitmap getCroppedBitmap(Bitmap bmp, int radius) {
-        Bitmap scaledBmp = Bitmap.createScaledBitmap(bmp, radius * 2, radius * 2, true);
+        Bitmap scaledBmp = Bitmap.createScaledBitmap(bmp, radius * 2 , radius * 2, true);
+
         Bitmap output = Bitmap.createBitmap(radius * 2, radius * 2, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
 
@@ -124,17 +125,26 @@ public class RoundImageView  extends ImageView {
         //将会以颜色ARBG填充整个控件的Canvas背景，现在指定的颜色是透明度为0，RGB：000000
         canvas.drawARGB(0, 0, 0, 0);
 
-        // Draws a circle to create the border
+        //Draws a circle to create the border
         paint.setColor(borderColor);
         paint.setStrokeWidth(borderWidth);
         //画边框
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, circleRadius + borderWidth, paint);
 
-        // Draws the image subtracting the border width
+        /**
+         * 第一种方案
+         */
+        //Draws the image subtracting the border width
         BitmapShader s = new BitmapShader(scaledBmp, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
         paint.setShader(s);
         //画圆形图片
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, circleRadius, paint);
+
+        /**
+         * 第二种方案，但是这种方案无边框，推荐上面那种
+         */
+//        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+//        canvas.drawBitmap(scaledBmp,0,0,paint);
 
         //将刚刚画好的bitmap返回并画出来
         return output;

@@ -1,1 +1,2 @@
 include ':app', ':refreshlistview', ':slidepanelayoutsample', ':suuportsample'
+include ':library'

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.hzlinxuanxuan.suuportsample.Adapter.RecyclerListAdapter;
 import com.example.hzlinxuanxuan.suuportsample.Adapter.SimpleItemTouchHelperCallback;
@@ -41,7 +42,17 @@ public class ContactsFriendFragment extends Fragment implements View.OnClickList
         lv.setLayoutManager(layoutManager);
 
         datas = DataUtil.getData();
-        adapter = new RecyclerListAdapter(null, datas);
+        adapter = new RecyclerListAdapter(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "click the button", Toast.LENGTH_SHORT).show();
+            }
+        }, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "click the item", Toast.LENGTH_SHORT).show();
+            }
+        }, datas);
         lv.setAdapter(adapter);
 
         mCallback = new SimpleItemTouchHelperCallback(adapter);
