@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/et_psw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password" />
-
-    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/et_account"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/et_psw">
+        android:layout_height="wrap_content">
 
         <EditText
             android:layout_width="match_parent"
@@ -30,21 +18,38 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.v7.widget.SwitchCompat
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/et_psw"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android.support.design:counterEnabled="true"
+        android.support.design:counterMaxLength="10"
+        android.support.design:counterOverflowTextAppearance="@style/counterOverride"
+        android.support.design:counterTextAppearance="@style/counterText"
+        android.support.design:errorEnabled="true"
+        android.support.design:hintAnimationEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.SwitchCompat
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/et_psw"
         android:layout_marginTop="10dp"
-        android:text="Remember psw?"/>
+        android:text="Remember psw?" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_psw"
         android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="Login" />
 
-
-
-</RelativeLayout>
+</LinearLayout>

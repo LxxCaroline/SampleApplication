@@ -104,6 +104,11 @@ public class HomeFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast.makeText(getActivity(), "u click menu -- " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        if(item.getItemId() == R.id.action_search){
+            fabBtn.show();
+        }else{
+            fabBtn.hide();
+        }
         return super.onOptionsItemSelected(item);
     }
 }

@@ -9,4 +9,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:onClick="datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日期选择"/>
+
+    <DatePicker android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:startYear="2000"
+        android:endYear="2050"
+        android:calendarViewShown="true"
+        android:spinnersShown="true"
+        />
+
 </LinearLayout>
