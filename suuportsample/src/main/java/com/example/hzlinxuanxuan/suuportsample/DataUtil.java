@@ -7,10 +7,10 @@ import java.util.ArrayList;
  */
 public class DataUtil {
 
-    public static ArrayList<String> getData() {
-        ArrayList<String> datas = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            datas.add("data " + i);
+    public static ArrayList getData() {
+        ArrayList datas = new ArrayList<>();
+        for (int i = 0; i < 7; i++) {
+            datas.add(i);
         }
         return datas;
     }

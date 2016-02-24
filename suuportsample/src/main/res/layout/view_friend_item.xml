@@ -2,90 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="7dp">
+    android:layout_height="wrap_content">
 
     <!-- 可以为CardView设置一些阴影，圆角等等-->
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/card_bg"
-        app:cardCornerRadius="3dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/iv_portrait"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_alignParentTop="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/nav_header_bg" />
-
-            <Button
-                android:id="@+id/btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="click"
-                android:layout_below="@id/iv_portrait"
-                android:layout_alignParentRight="true"/>
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_portrait"
-                android:text="Name: Caroline"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_name"
-                android:text="Tel: 13719238820"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <!--<RelativeLayout-->
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/card_view"-->
         <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="false"-->
+        <!--android:foreground="?android:attr/selectableItemBackground"-->
+        <!--app:cardBackgroundColor="@android:color/transparent"-->
+        <!--app:cardCornerRadius="3dp"-->
+        <!--app:cardElevation="10dp">-->
 
-        <!--<ImageView-->
-            <!--android:id="@+id/iv_portrait"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="150dp"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:scaleType="centerCrop"-->
-            <!--android:src="@drawable/nav_header_bg" />-->
+        <ImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image1"
+            android:scaleType="centerCrop" />
 
-        <!--<TextView-->
-            <!--android:id="@+id/tv_name"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/iv_portrait"-->
-            <!--android:text="Name: Caroline"-->
-            <!--android:textColor="#000"-->
-            <!--android:textSize="20sp" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/tv_name"-->
-            <!--android:text="Tel: 13719238820"-->
-            <!--android:textColor="#000"-->
-            <!--android:textSize="20sp" />-->
-
-    <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
 
 </RelativeLayout>

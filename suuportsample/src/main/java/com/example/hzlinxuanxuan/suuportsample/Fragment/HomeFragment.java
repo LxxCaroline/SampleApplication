@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,11 +22,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.OvershootInterpolator;
 import android.widget.Toast;
 
-import com.example.hzlinxuanxuan.suuportsample.Activity.SecondActivity;
-import com.example.hzlinxuanxuan.suuportsample.Adapter.RecyclerViewAdapter;
-import com.example.hzlinxuanxuan.suuportsample.ItemDecoration.GridDividerItemDecoration;
+import com.example.hzlinxuanxuan.suuportsample.Activity.FabToolBarActivity;
+import com.example.hzlinxuanxuan.suuportsample.Adapter.HomeRecyclerAdapter;
+import com.example.hzlinxuanxuan.suuportsample.ItemDecoration.FlowerDecoration;
 import com.example.hzlinxuanxuan.suuportsample.R;
 
 /**
@@ -63,10 +65,10 @@ public class HomeFragment extends Fragment {
 //        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 3);
         rv.setLayoutManager(layoutManager);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(new RecyclerViewAdapter.MyOnClickListener() {
+        HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(new HomeRecyclerAdapter.MyOnClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Snackbar.make(rootLayout, "u click item:" + position + "!", Snackbar.LENGTH_SHORT)
+                Snackbar.make(rootLayout, "u click item:" + position + "!", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -75,17 +77,16 @@ public class HomeFragment extends Fragment {
             }
         });
         rv.setAdapter(adapter);
-        rv.addItemDecoration(new GridDividerItemDecoration(getActivity()));
+        rv.addItemDecoration(new FlowerDecoration(getActivity()));
 
         rootLayout = (CoordinatorLayout) view.findViewById(R.id.coordinator_layout);
         fabBtn = (FloatingActionButton) view.findViewById(R.id.fabBtn);
         fabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), SecondActivity.class));
+                startActivity(new Intent(getActivity(), FabToolBarActivity.class));
             }
         });
-
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsingToolbarLayout);
         collapsingToolbarLayout.setTitle("Design Library");
     }
@@ -105,10 +106,13 @@ public class HomeFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast.makeText(getActivity(), "u click menu -- " + item.getTitle(), Toast.LENGTH_SHORT).show();
         if(item.getItemId() == R.id.action_search){
-            fabBtn.show();
+            final OvershootInterpolator interpolator = new OvershootInterpolator();
+            ViewCompat.animate(fabBtn).rotation(135f).withLayer().setDuration(5000).setInterpolator(interpolator).start();
         }else{
-            fabBtn.hide();
+            final OvershootInterpolator interpolator = new OvershootInterpolator();
+            ViewCompat.animate(fabBtn).rotation(-135f).withLayer().setDuration(5000).setInterpolator(interpolator).start();
         }
-        return super.onOptionsItemSelected(item);
+        return true;
+//        return super.onOptionsItemSelected(item);
     }
 }

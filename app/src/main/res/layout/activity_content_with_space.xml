@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.think.linxuanxuan.sampleapplication.other.ContentWithSpaceEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入银行卡卡号"
+        android:paddingRight="15dp"
+        app:epaysdk_type="card" />
+
+    <com.think.linxuanxuan.sampleapplication.other.ContentWithSpaceEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入电话号码"
+        android:paddingRight="15dp"
+        app:epaysdk_type="phone" />
+
+    <com.think.linxuanxuan.sampleapplication.other.ContentWithSpaceEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入身份证号"
+        android:paddingRight="15dp"
+        app:epaysdk_type="IDCard" />
+
+</LinearLayout>

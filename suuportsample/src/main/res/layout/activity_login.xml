@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -23,12 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="false"
-        android.support.design:counterEnabled="true"
-        android.support.design:counterMaxLength="10"
-        android.support.design:counterOverflowTextAppearance="@style/counterOverride"
-        android.support.design:counterTextAppearance="@style/counterText"
-        android.support.design:errorEnabled="true"
-        android.support.design:hintAnimationEnabled="true">
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        app:counterTextAppearance="@style/counterText"
+        app:errorEnabled="true"
+        app:hintAnimationEnabled="true">
 
         <EditText
             android:layout_width="match_parent"

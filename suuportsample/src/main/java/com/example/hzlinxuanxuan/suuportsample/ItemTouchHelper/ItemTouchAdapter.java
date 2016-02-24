@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.example.hzlinxuanxuan.suuportsample.Adapter;
+package com.example.hzlinxuanxuan.suuportsample.ItemTouchHelper;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 /**
  * Interface to listen for a move or dismissal event from a {@link ItemTouchHelper.Callback}.
- *
- * @author Paul Burke (ipaulpro)
+ * 当你想要使用{@link SampleItemTouchCallback}实现对RecyclerView的拖拽、滑动操作的时候，你的
+ * Adapter需要实现该接口
  */
-public interface ItemTouchHelperAdapter {
+public interface ItemTouchAdapter {
 
     /**
      * Called when an item has been dragged far enough to trigger a move. This is called every time

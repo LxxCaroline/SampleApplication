@@ -36,6 +36,7 @@
     <string name="ServiceSample">Service的例子</string>
     <string name="SocketSample">Socket的例子</string>
     <string name="MediaSample">Media的例子</string>
+    <string name="ContentWithSpaceSample">空格输入控件</string>
     <string name="DrawSample">自定义View的例子</string>
     <string name="SensorSample">传感器的例子</string>
     <string name="AppWidgetSample">桌面控件的例子</string>

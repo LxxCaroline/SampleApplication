@@ -9,15 +9,15 @@ import android.widget.TextView;
 /**
  * Created by hzlinxuanxuan on 2015/11/5.
  */
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapter.MyViewHolder> {
     private MyOnClickListener listener;
 
-    public RecyclerViewAdapter(MyOnClickListener listener) {
+    public HomeRecyclerAdapter(MyOnClickListener listener) {
         this.listener = listener;
     }
 
     @Override
-    public RecyclerViewAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public HomeRecyclerAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
         MyViewHolder vh = new MyViewHolder(v, listener);
         return vh;
@@ -30,7 +30,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 13;
+        return 50;
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

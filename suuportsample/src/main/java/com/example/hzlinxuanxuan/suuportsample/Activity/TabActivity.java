@@ -14,7 +14,7 @@ import com.example.hzlinxuanxuan.suuportsample.R;
 /**
  * Created by hzlinxuanxuan on 2015/11/1.
  */
-public class SecondActivity extends AppCompatActivity {
+public class TabActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -46,7 +46,7 @@ public class SecondActivity extends AppCompatActivity {
             //初始化每个tab内容的页面，需要根据不同位置来加载不同的页面
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
-                Button btn = new Button(SecondActivity.this);
+                Button btn = new Button(TabActivity.this);
                 btn.setText("tv" + position);
                 btn.setTextSize(30.f);
                 container.addView(btn);

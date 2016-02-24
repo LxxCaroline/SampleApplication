@@ -14,30 +14,30 @@
  * limitations under the License.
  */
 
-package com.example.hzlinxuanxuan.suuportsample.Adapter;
+package com.example.hzlinxuanxuan.suuportsample.ItemTouchHelper;
 
 import android.graphics.Canvas;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
+import com.example.hzlinxuanxuan.suuportsample.Adapter.SampleRecyclerAdapter;
+
 /**
  * An implementation of {@link ItemTouchHelper.Callback} that enables basic drag & drop and
  * swipe-to-dismiss. Drag events are automatically started by an item long-press.<br/>
  * </br/>
  * Expects the <code>RecyclerView.Adapter</code> to listen for {@link
- * ItemTouchHelperAdapter} callbacks and the <code>RecyclerView.ViewHolder</code> to implement
- * {@link ItemTouchHelperViewHolder}.
- *
- * @author Paul Burke (ipaulpro)
+ * ItemTouchAdapter} callbacks and the <code>RecyclerView.ViewHolder</code> to implement
+ * {@link ItemTouchViewHolder}.
  */
-public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
+public class SampleItemTouchCallback extends ItemTouchHelper.Callback {
 
     public static final float ALPHA_FULL = 1.0f;
 
-    private final ItemTouchHelperAdapter mAdapter;
+    private final SampleRecyclerAdapter mAdapter;
 
-    public SimpleItemTouchHelperCallback(ItemTouchHelperAdapter adapter) {
+    public SampleItemTouchCallback(SampleRecyclerAdapter adapter) {
         mAdapter = adapter;
     }
 
@@ -67,18 +67,15 @@ public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target) {
-        if (source.getItemViewType() != target.getItemViewType()) {
-            return false;
-        }
-        // Notify the adapter of the move
-        mAdapter.onItemMove(source.getAdapterPosition(), target.getAdapterPosition());
+        mAdapter.swapData(source.getAdapterPosition(), target.getAdapterPosition());
+        mAdapter.notifyItemMoved(source.getAdapterPosition(), target.getAdapterPosition());
         return true;
     }
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-        // Notify the adapter of the dismissal
-        mAdapter.onItemDismiss(viewHolder.getAdapterPosition());
+        mAdapter.removeData(viewHolder.getAdapterPosition());
+        mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
     }
 
     @Override
@@ -97,9 +94,9 @@ public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
         // We only want the active item to change
         if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
-            if (viewHolder instanceof ItemTouchHelperViewHolder) {
+            if (viewHolder instanceof ItemTouchViewHolder) {
                 // Let the view holder know that this item is being moved or dragged
-                ItemTouchHelperViewHolder itemViewHolder = (ItemTouchHelperViewHolder) viewHolder;
+                ItemTouchViewHolder itemViewHolder = (ItemTouchViewHolder) viewHolder;
                 itemViewHolder.onItemSelected();
             }
         }
@@ -110,10 +107,10 @@ public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         super.clearView(recyclerView, viewHolder);
         viewHolder.itemView.setAlpha(ALPHA_FULL);
-        if (viewHolder instanceof ItemTouchHelperViewHolder) {
+        if (viewHolder instanceof ItemTouchViewHolder) {
             // Tell the view holder it's time to restore the idle state
-            ItemTouchHelperViewHolder itemViewHolder = (ItemTouchHelperViewHolder) viewHolder;
-            itemViewHolder.onItemClear();
+            ItemTouchViewHolder itemViewHolder = (ItemTouchViewHolder) viewHolder;
+            itemViewHolder.onItemIdle();
         }
     }
 }

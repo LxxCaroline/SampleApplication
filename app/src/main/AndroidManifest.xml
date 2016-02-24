@@ -336,6 +336,14 @@
                 <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".mainActivity.ContentWithSpaceActivity"
+            android:label="@string/ContentWithSpaceSample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="com.think.linxuanxuan.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".other.MyAppWidgetConfigure">

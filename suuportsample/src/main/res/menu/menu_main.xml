@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_home"
             android:checkable="true"
             android:icon="@mipmap/ic_launcher"
-            tools:title="lala"
-            android:title="Home" />
+            android:title="主页" />
         <item
-            android:id="@+id/menu_contacts"
             android:checkable="false"
             android:icon="@mipmap/ic_launcher"
-            android:title="Contacts">
+            android:title="RecyclerView">
             <menu>
                 <item
-                    android:id="@+id/menu_friends"
+                    android:id="@+id/menu_linearlayout"
                     android:checkable="true"
-                    android:icon="@drawable/ic_action_person"
-                    android:title="Friends" />
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="LinearLayoutManager" />
+                <item
+                    android:id="@+id/menu_gridlayout"
+                    android:checkable="true"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="GridLayoutManager" />
+                <item
+                    android:id="@+id/menu_staggeredlayout"
+                    android:checkable="true"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="StaggeredGridLayoutManager" />
             </menu>
         </item>
-        <item
-            android:id="@+id/menu_waterfall"
-            android:checkable="true"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Home" />
+
     </group>
 
 </menu>

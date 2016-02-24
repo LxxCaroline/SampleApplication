@@ -10,9 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.hzlinxuanxuan.suuportsample.DelayedTask;
-import com.example.hzlinxuanxuan.suuportsample.Fragment.ContactsFriendFragment;
+import com.example.hzlinxuanxuan.suuportsample.Fragment.RecyclerViewFragment;
 import com.example.hzlinxuanxuan.suuportsample.Fragment.HomeFragment;
-import com.example.hzlinxuanxuan.suuportsample.Fragment.PictureFragment;
 import com.example.hzlinxuanxuan.suuportsample.R;
 
 import java.util.ArrayList;
@@ -30,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         fragments = new ArrayList<>();
         fragments.add(new HomeFragment());
-        fragments.add(new ContactsFriendFragment());
-        fragments.add(new PictureFragment());
+        fragments.add(new RecyclerViewFragment());
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigation = (NavigationView) findViewById(R.id.navigation);
         FragmentManager manager = getSupportFragmentManager();
@@ -47,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.menu_home:
                             frag = fragments.get(0);
                             break;
-                        case R.id.menu_friends:
+                        case R.id.menu_linearlayout:
                             frag = fragments.get(1);
                             break;
-                        case R.id.menu_waterfall:
+                        case R.id.menu_gridlayout:
                             frag = fragments.get(2);
                     }
                     if (frag != null) {

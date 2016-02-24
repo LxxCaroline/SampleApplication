@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
         android:layout_height="256dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -38,7 +39,6 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <!--  Your Scrollable View-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/lv"
         android:layout_width="match_parent"
@@ -49,11 +49,18 @@
         android:id="@+id/fabBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
         android:src="@drawable/ic_plus"
-        app:borderWidth="0dp"
-        app:fabSize="normal" />
+        app:backgroundTint="@color/card_bg"
+        app:backgroundTintMode="src_in"
+        app:borderWidth="1dp"
+        app:elevation="05dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/lv"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_behavior="com.example.hzlinxuanxuan.suuportsample.ListScrollBehavior"
+        app:pressedTranslationZ="25dp"
+        app:rippleColor="@color/card_aquatic" />
 
 </android.support.design.widget.CoordinatorLayout>
