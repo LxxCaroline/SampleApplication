@@ -45,11 +45,9 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.menu_home:
                             frag = fragments.get(0);
                             break;
-                        case R.id.menu_linearlayout:
+                        case R.id.menu_recyclerview:
                             frag = fragments.get(1);
                             break;
-                        case R.id.menu_gridlayout:
-                            frag = fragments.get(2);
                     }
                     if (frag != null) {
                         FragmentManager manager = getSupportFragmentManager();

@@ -23,14 +23,6 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.example.hzlinxuanxuan.suuportsample.Adapter.SampleRecyclerAdapter;
 
-/**
- * An implementation of {@link ItemTouchHelper.Callback} that enables basic drag & drop and
- * swipe-to-dismiss. Drag events are automatically started by an item long-press.<br/>
- * </br/>
- * Expects the <code>RecyclerView.Adapter</code> to listen for {@link
- * ItemTouchAdapter} callbacks and the <code>RecyclerView.ViewHolder</code> to implement
- * {@link ItemTouchViewHolder}.
- */
 public class SampleItemTouchCallback extends ItemTouchHelper.Callback {
 
     public static final float ALPHA_FULL = 1.0f;
@@ -85,6 +77,7 @@ public class SampleItemTouchCallback extends ItemTouchHelper.Callback {
             final float alpha = ALPHA_FULL - Math.abs(dX) / (float) viewHolder.itemView.getWidth();
             viewHolder.itemView.setAlpha(alpha);
             viewHolder.itemView.setTranslationX(dX);
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         } else {
             super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
@@ -92,12 +85,9 @@ public class SampleItemTouchCallback extends ItemTouchHelper.Callback {
 
     @Override
     public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
-        // We only want the active item to change
         if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
-            if (viewHolder instanceof ItemTouchViewHolder) {
-                // Let the view holder know that this item is being moved or dragged
-                ItemTouchViewHolder itemViewHolder = (ItemTouchViewHolder) viewHolder;
-                itemViewHolder.onItemSelected();
+            if (viewHolder instanceof SampleRecyclerAdapter.SampleViewHolder) {
+                ((SampleRecyclerAdapter.SampleViewHolder) viewHolder).onItemSelected();
             }
         }
         super.onSelectedChanged(viewHolder, actionState);
@@ -107,10 +97,8 @@ public class SampleItemTouchCallback extends ItemTouchHelper.Callback {
     public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         super.clearView(recyclerView, viewHolder);
         viewHolder.itemView.setAlpha(ALPHA_FULL);
-        if (viewHolder instanceof ItemTouchViewHolder) {
-            // Tell the view holder it's time to restore the idle state
-            ItemTouchViewHolder itemViewHolder = (ItemTouchViewHolder) viewHolder;
-            itemViewHolder.onItemIdle();
+        if (viewHolder instanceof SampleRecyclerAdapter.SampleViewHolder) {
+            ((SampleRecyclerAdapter.SampleViewHolder) viewHolder).onItemIdle();
         }
     }
 }

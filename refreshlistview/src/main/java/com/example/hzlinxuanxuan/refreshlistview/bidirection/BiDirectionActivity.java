@@ -21,7 +21,7 @@ public class BiDirectionActivity extends AppCompatActivity implements BiDirectio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bidirection);
         lv = (BiDirectionListView) findViewById(R.id.lv);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, getData());
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, getData());
         lv.setAdapter(adapter);
         lv.setPullLoadEnable(true);
         lv.setPullRefreshEnable(true);

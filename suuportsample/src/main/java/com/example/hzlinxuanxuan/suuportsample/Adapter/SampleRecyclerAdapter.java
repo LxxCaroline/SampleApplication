@@ -25,8 +25,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.hzlinxuanxuan.suuportsample.ItemTouchHelper.ItemTouchAdapter;
-import com.example.hzlinxuanxuan.suuportsample.ItemTouchHelper.ItemTouchViewHolder;
 import com.example.hzlinxuanxuan.suuportsample.R;
 
 import java.util.ArrayList;
@@ -83,11 +81,7 @@ public class SampleRecyclerAdapter extends RecyclerView.Adapter<SampleRecyclerAd
         return datas.size();
     }
 
-    /**
-     * Simple example of a view holder that implements {@link ItemTouchViewHolder} and has a
-     * "handle" view that initiates a drag event when touched.
-     */
-    public static class SampleViewHolder extends RecyclerView.ViewHolder implements ItemTouchViewHolder {
+    public static class SampleViewHolder extends RecyclerView.ViewHolder {
 
         public CardView mCardView;
         public ImageView iv;
@@ -100,12 +94,10 @@ public class SampleRecyclerAdapter extends RecyclerView.Adapter<SampleRecyclerAd
             this.itemView.setOnClickListener(itemListener);
         }
 
-        @Override
         public void onItemSelected() {
             itemView.setBackgroundColor(Color.LTGRAY);
         }
 
-        @Override
         public void onItemIdle() {
             itemView.setBackgroundColor(0);
         }

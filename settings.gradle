@@ -1,2 +1,2 @@
-include ':app', ':refreshlistview', ':slidepanelayoutsample', ':suuportsample'
+include ':app', ':refreshlistview', ':slidepanelayoutsample', ':suuportsample', ':viewdraghelpersample'
 include ':library'

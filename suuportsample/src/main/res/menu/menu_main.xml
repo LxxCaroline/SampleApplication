@@ -13,20 +13,10 @@
             android:title="RecyclerView">
             <menu>
                 <item
-                    android:id="@+id/menu_linearlayout"
+                    android:id="@+id/menu_recyclerview"
                     android:checkable="true"
                     android:icon="@mipmap/ic_launcher"
-                    android:title="LinearLayoutManager" />
-                <item
-                    android:id="@+id/menu_gridlayout"
-                    android:checkable="true"
-                    android:icon="@mipmap/ic_launcher"
-                    android:title="GridLayoutManager" />
-                <item
-                    android:id="@+id/menu_staggeredlayout"
-                    android:checkable="true"
-                    android:icon="@mipmap/ic_launcher"
-                    android:title="StaggeredGridLayoutManager" />
+                    android:title="RecyclerView" />
             </menu>
         </item>
 

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * Created by hzlinxuanxuan on 2015/10/29.
+ * 该下拉刷新使用的是support v4包下的
  */
 public class SwipeRefreshActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener {
 
