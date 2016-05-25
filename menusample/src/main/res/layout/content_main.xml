@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:orientation="vertical">
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,7 +26,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="长按显示上下文操作模式菜单" />
+        android:text="点击显示上下文操作模式菜单" />
+
+    <Button
+        android:id="@+id/btn_context_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="点击显示浮动模式的上下文操作模式菜单\n(在API23及以上的版本才有用)" />
+
+    <TextView
+        android:id="@+id/tv_context_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textIsSelectable="true"
+        android:text="长按该文本显示浮动模式的上下文操作模式菜单\n(在API23及以上的版本才有用)" />
 
     <Button
         android:id="@+id/btn_popup"
